@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KnowledgeSpace.BackendServer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240314023232_InitDb")]
+    [Migration("20240314031342_InitDb")]
     partial class InitDb
     {
         /// <inheritdoc />
@@ -41,7 +41,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -62,7 +61,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
@@ -144,7 +142,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("varchar(200)");
 
                     b.Property<string>("SeoDescription")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -210,7 +207,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("OwnwerUserId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
@@ -231,7 +227,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ParentId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
@@ -263,29 +258,24 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Environment")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("ErrorMessage")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Labels")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("NumberOfComments")
@@ -303,7 +293,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Problem")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -313,7 +302,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("varchar(500)");
 
                     b.Property<string>("StepToReproduce")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -322,7 +310,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Workaround")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -392,7 +379,6 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -409,12 +395,10 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ReportUserId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 

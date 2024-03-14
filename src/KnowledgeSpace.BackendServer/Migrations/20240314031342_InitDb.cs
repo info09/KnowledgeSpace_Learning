@@ -25,8 +25,8 @@ namespace KnowledgeSpace.BackendServer.Migrations
                     EntityId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    Content = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    UserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -107,7 +107,7 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     SeoAlias = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    SeoDescription = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    SeoDescription = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     SortOrder = table.Column<int>(type: "int", nullable: false),
                     ParentId = table.Column<int>(type: "int", nullable: true),
                     NumberOfTickets = table.Column<int>(type: "int", nullable: true)
@@ -149,7 +149,7 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Content = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     KnowledgeBaseId = table.Column<int>(type: "int", nullable: false),
-                    OwnwerUserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    OwnwerUserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -166,7 +166,7 @@ namespace KnowledgeSpace.BackendServer.Migrations
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Url = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     SortOrder = table.Column<int>(type: "int", nullable: false),
-                    ParentId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    ParentId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -182,15 +182,15 @@ namespace KnowledgeSpace.BackendServer.Migrations
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     SeoAlias = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Environment = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Problem = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    StepToReproduce = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ErrorMessage = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Workaround = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Note = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Environment = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Problem = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    StepToReproduce = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ErrorMessage = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Workaround = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OwnerUserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    Labels = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Labels = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     NumberOfComments = table.Column<int>(type: "int", nullable: true),
@@ -247,12 +247,12 @@ namespace KnowledgeSpace.BackendServer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     KnowledgeBaseId = table.Column<int>(type: "int", nullable: true),
                     CommentId = table.Column<int>(type: "int", nullable: true),
-                    Content = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    ReportUserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    ReportUserId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsProcessed = table.Column<bool>(type: "bit", nullable: false),
-                    Type = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    Type = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {

@@ -16,11 +16,11 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
         public int? CommentId { get; set; }
 
         [MaxLength(500)]
-        public string Content { get; set; }
+        public string? Content { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string ReportUserId { get; set; }
+        public string? ReportUserId { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? LastModifiedDate { get; set; }
@@ -29,6 +29,6 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
     }
 }

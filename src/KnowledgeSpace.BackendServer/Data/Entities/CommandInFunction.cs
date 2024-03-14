@@ -9,11 +9,11 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Required]
-        public string CommandId { get; set; }
+        public required string CommandId { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Required]
-        public string FunctionId { get; set; }
+        public required string FunctionId { get; set; }
     }
 }

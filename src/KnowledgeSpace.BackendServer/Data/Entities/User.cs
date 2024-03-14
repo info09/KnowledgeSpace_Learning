@@ -7,11 +7,11 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
     {
         [MaxLength(50)]
         [Required]
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
 
         [MaxLength(50)]
         [Required]
-        public string LastName { get; set; }
+        public required string LastName { get; set; }
 
         [Required]
         public DateTime Dob { get; set; }

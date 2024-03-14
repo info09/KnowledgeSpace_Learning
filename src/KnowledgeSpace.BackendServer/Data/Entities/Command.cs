@@ -9,10 +9,10 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Key]
-        public string Id { get; set; }
+        public required string Id { get; set; }
 
         [MaxLength(50)]
         [Required]
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 }

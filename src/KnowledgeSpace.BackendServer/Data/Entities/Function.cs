@@ -13,17 +13,17 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(200)]
         [Required]
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         [MaxLength(200)]
         [Required]
-        public string Url { get; set; }
+        public required string Url { get; set; }
 
         [Required]
         public int SortOrder { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string ParentId { get; set; }
+        public string? ParentId { get; set; }
     }
 }

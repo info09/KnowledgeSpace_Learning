@@ -17,38 +17,38 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(500)]
         [Required]
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
         [MaxLength(500)]
         [Required]
         [Column(TypeName = "varchar(500)")]
-        public string SeoAlias { get; set; }
+        public required string SeoAlias { get; set; }
 
         [MaxLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [MaxLength(500)]
-        public string Environment { get; set; }
+        public string? Environment { get; set; }
 
         [MaxLength(500)]
-        public string Problem { get; set; }
+        public string? Problem { get; set; }
 
-        public string StepToReproduce { get; set; }
-
-        [MaxLength(500)]
-        public string ErrorMessage { get; set; }
+        public string? StepToReproduce { get; set; }
 
         [MaxLength(500)]
-        public string Workaround { get; set; }
+        public string? ErrorMessage { get; set; }
 
-        public string Note { get; set; }
+        [MaxLength(500)]
+        public string? Workaround { get; set; }
+
+        public string? Note { get; set; }
 
         [Required]
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string OwnerUserId { get; set; }
+        public required string OwnerUserId { get; set; }
 
-        public string Labels { get; set; }
+        public string? Labels { get; set; }
 
         public DateTime CreateDate { get; set; }
 

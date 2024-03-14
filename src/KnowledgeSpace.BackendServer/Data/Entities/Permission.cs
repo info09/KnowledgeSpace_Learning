@@ -15,14 +15,14 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string FunctionId { get; set; }
+        public string? FunctionId { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string RoleId { get; set; }
+        public string? RoleId { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string CommandId { get; set; }
+        public string? CommandId { get; set; }
     }
 }

@@ -12,15 +12,15 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(200)]
         [Required]
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         [MaxLength(200)]
         [Column(TypeName = "varchar(200)")]
         [Required]
-        public string SeoAlias { get; set; }
+        public required string SeoAlias { get; set; }
 
         [MaxLength(500)]
-        public string SeoDescription { get; set; }
+        public string? SeoDescription { get; set; }
 
         [Required]
         public int SortOrder { get; set; }

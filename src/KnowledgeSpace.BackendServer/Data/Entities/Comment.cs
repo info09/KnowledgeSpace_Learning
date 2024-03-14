@@ -13,7 +13,7 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(500)]
         [Required]
-        public string Content { get; set; }
+        public required string Content { get; set; }
 
         [Required]
         [Range(1, Double.PositiveInfinity)]
@@ -21,7 +21,7 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string OwnwerUserId { get; set; }
+        public string? OwnwerUserId { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? LastModifiedDate { get; set; }

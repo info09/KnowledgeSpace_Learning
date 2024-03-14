@@ -14,17 +14,17 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Required]
-        public string Action { get; set; }
+        public required string Action { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Required]
-        public string EntityName { get; set; }
+        public required string EntityName { get; set; }
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
         [Required]
-        public string EntityId { get; set; }
+        public required string EntityId { get; set; }
 
         public DateTime CreateDate { get; set; }
 
@@ -32,9 +32,9 @@ namespace KnowledgeSpace.BackendServer.Data.Entities
 
         [MaxLength(50)]
         [Column(TypeName = "varchar(50)")]
-        public string UserId { get; set; }
+        public string? UserId { get; set; }
 
         [MaxLength(500)]
-        public string Content { get; set; }
+        public string? Content { get; set; }
     }
 }
